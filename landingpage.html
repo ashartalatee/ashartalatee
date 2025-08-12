@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Koleksi Landing Page karya Ashar — Siap untuk iklan Meta Ads, mobile-first, dan konversi tinggi.">
+  <title>Koleksi Landing Page — Ashar Talatee</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root {
+      --accent-start: #7c3aed;
+      --accent-mid: #06b6d4;
+      --accent-end: #06d6a0;
+      --bg: #0b1020;
+      --card: #0f1724;
+    }
+    html, body {
+      background: linear-gradient(180deg,#040511 0%,var(--bg) 60%);
+      color: rgba(255,255,255,0.95);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    .neon-accent {
+      background: linear-gradient(90deg,var(--accent-start),var(--accent-mid),var(--accent-end));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border: 1px solid rgba(255,255,255,0.04);
+      backdrop-filter: blur(6px);
+    }
+    @keyframes floaty {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+      100% { transform: translateY(0px); }
+    }
+    .floaty { animation: floaty 6s ease-in-out infinite; }
+    [data-animate="in"] { 
+      opacity:0; 
+      transform: translateY(12px) scale(0.995); 
+      transition: all 560ms cubic-bezier(.16,.84,.24,1); 
+    }
+    [data-animate="in"].is-visible { 
+      opacity:1; 
+      transform: translateY(0) scale(1); 
+    }
+  </style>
+</head>
+<body class="antialiased text-slate-100">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 border-b border-white/3 bg-[rgba(2,6,23,0.6)] backdrop-blur-sm">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full overflow-hidden ring-1 ring-white/6 card">
+          <img src="profil.jpg" alt="Ashar profile" class="w-full h-full object-cover">
+        </div>
+        <div>
+          <div class="text-sm font-semibold">Ashar Talatee</div>
+          <div class="text-xs text-white/60">Meta Ads · Landing Page Specialist</div>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-4">
+        <a href="index.html" class="text-sm hover:underline">Home</a>
+        <a href="index.html" class="text-sm hover:underline font-semibold text-white">Portfolio</a>
+        <a href="index.html" class="text-sm hover:underline">Services</a>
+        <a href="index.html" class="ml-2 inline-flex items-center gap-2 px-3 py-2 rounded-full bg-gradient-to-r from-violet-600 to-teal-400 text-black text-sm font-medium shadow-sm">Contact</a>
+      </nav>
+      <button id="navToggle" class="md:hidden inline-flex items-center p-2 rounded-md ring-1 ring-white/5">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobileNav" class="md:hidden px-4 pb-4 hidden">
+      <div class="flex flex-col gap-2">
+        <a href="index.html" class="py-2 px-3 rounded-md hover:bg-white/3">Home</a>
+        <a href="index.html" class="py-2 px-3 rounded-md hover:bg-white/3">Portfolio</a>
+        <a href="index.html" class="py-2 px-3 rounded-md hover:bg-white/3">Services</a>
+        <a href="index.html" class="py-2 px-3 rounded-md hover:bg-white/3">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center mb-10">
+        <h1 class="text-4xl font-bold neon-accent">Koleksi Landing Page</h1>
+        <p class="mt-3 text-white/70">Semua landing page ini siap iklan Meta Ads, cepat di-load, dan sudah dioptimalkan untuk konversi tinggi.</p>
+      </div>
+
+      <!-- Grid portfolio -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Item -->
+        <article class="card p-3 rounded-xl hover:scale-[1.02] transition transform">
+          <a href="https://ashartalatee.github.io/ashar/" target="_blank" class="block rounded-lg overflow-hidden">
+            <img src="kopidesa.jpg" alt="Kopi Desa Asli" class="w-full h-40 object-cover" loading="lazy">
+            <div class="p-3">
+              <h3 class="font-semibold">Kopi Desa Asli</h3>
+              <p class="text-xs text-white/60 mt-1">Dari tangan petani desa ke cangkir Anda — rasa otentik yang lahir dari kerja keras.</p>
+              <div class="mt-3">
+                <span class="px-2 py-1 rounded bg-white/3 text-[11px]">Mobile-first</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <!-- Tambahkan koleksi lain -->
+        <article class="card p-3 rounded-xl hover:scale-[1.02] transition transform">
+          <a href="https://example.com/landing-2" target="_blank" class="block rounded-lg overflow-hidden">
+            <img src="https://placehold.co/600x360?text=Landing+2" alt="Landing 2" class="w-full h-40 object-cover" loading="lazy">
+            <div class="p-3">
+              <h3 class="font-semibold">SaaS Trial Signups</h3>
+              <p class="text-xs text-white/60 mt-1">Funnel signup tanpa hambatan dengan tracking siap pakai.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="card p-3 rounded-xl hover:scale-[1.02] transition transform">
+          <a href="https://example.com/landing-3" target="_blank" class="block rounded-lg overflow-hidden">
+            <img src="https://placehold.co/600x360?text=Landing+3" alt="Landing 3" class="w-full h-40 object-cover" loading="lazy">
+            <div class="p-3">
+              <h3 class="font-semibold">Course Launch Funnel</h3>
+              <p class="text-xs text-white/60 mt-1">Halaman penjualan kursus dengan kit kreatif iklan.</p>
+            </div>
+          </a>
+        </article>
+
+                <article class="card p-3 rounded-xl hover:scale-[1.02] transition transform">
+          <a href="https://example.com/landing-4" target="_blank" class="block rounded-lg overflow-hidden">
+            <img src="https://placehold.co/600x360?text=Landing+4" alt="Kopi Desa Asli" class="w-full h-40 object-cover" loading="lazy">
+            <div class="p-3">
+              <h3 class="font-semibold">Kopi Desa Asli</h3>
+              <p class="text-xs text-white/60 mt-1">Dari tangan petani desa ke cangkir Anda — rasa otentik yang lahir dari kerja keras.</p>
+              <div class="mt-3">
+                <span class="px-2 py-1 rounded bg-white/3 text-[11px]">Mobile-first</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <!-- Tambahkan koleksi lain -->
+        <article class="card p-3 rounded-xl hover:scale-[1.02] transition transform">
+          <a href="https://example.com/landing-5" target="_blank" class="block rounded-lg overflow-hidden">
+            <img src="https://placehold.co/600x360?text=Landing+5" alt="Landing 2" class="w-full h-40 object-cover" loading="lazy">
+            <div class="p-3">
+              <h3 class="font-semibold">SaaS Trial Signups</h3>
+              <p class="text-xs text-white/60 mt-1">Funnel signup tanpa hambatan dengan tracking siap pakai.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="card p-3 rounded-xl hover:scale-[1.02] transition transform">
+          <a href="https://example.com/landing-6" target="_blank" class="block rounded-lg overflow-hidden">
+            <img src="https://placehold.co/600x360?text=Landing+6" alt="Landing 3" class="w-full h-40 object-cover" loading="lazy">
+            <div class="p-3">
+              <h3 class="font-semibold">Course Launch Funnel</h3>
+              <p class="text-xs text-white/60 mt-1">Halaman penjualan kursus dengan kit kreatif iklan.</p>
+            </div>
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/4 py-8 mt-12">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-lg overflow-hidden card ring-1 ring-white/6">
+          <img src="profil.jpg" alt="Ashar" class="w-full h-full object-cover">
+        </div>
+        <div>
+          <div class="font-semibold">Ashar Talatee</div>
+          <div class="text-xs text-white/60">Landing Page & Meta Ads Specialist</div>
+        </div>
+      </div>
+      <div class="text-xs text-white/50">© <span id="year"></span> Ashar Talatee. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const navToggle = document.getElementById('navToggle'),
+          mobileNav = document.getElementById('mobileNav');
+    navToggle.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
+  </script>
+
+</body>
+</html>
